@@ -23,7 +23,7 @@ function loadURL() {
       msg = "Invalid URL format", msg_cls += "alert-danger"
     }
   } else {
-    var canonical_url = is_match[0];
+    var canonical_url = "https://" + is_match[0].toLowerCase();
     var street = is_match[3], city = is_match[2], state = is_match[1], redfin_id = is_match[4];
     var unit = street.split("/")[1], street = street.split("/")[0];
     var address = street + (unit ? " " + unit : "") + ", " + is_match[2] + " " + is_match[1];
